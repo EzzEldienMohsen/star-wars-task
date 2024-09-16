@@ -35,8 +35,9 @@ const initialState: StarWarsInitial = {
 };
 export const getAllNames = createAsyncThunk(
   'starWars/getAllNames',
-  async (thunkAPI) => {
-    return getAllNamesThunk('', thunkAPI);
+  async (data: { page: string | number }, thunkAPI) => {
+    const { page } = data;
+    return getAllNamesThunk(`/?page=${page}`, thunkAPI);
   }
 );
 export const getSingleName = createAsyncThunk(

@@ -92,8 +92,8 @@ const Pagination: React.FC = () => {
   if (pageCount < 2) return null;
 
   return (
-    <div className="w-full px-8 lg:px-16 flex justify-end items-center">
-      <div className="flex justify-end items-center gap-x-2">
+    <div className="w-full px-2 lg:px-16 flex justify-center items-center">
+      <div className="flex justify-end items-center gap-x-1">
         <button
           className={buttonClass}
           onClick={() => {
